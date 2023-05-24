@@ -1,0 +1,192 @@
+/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/scss/bootstrap";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --fontFamily: "Lato", sans-serif;
+  --headingFontFamily: "Lora", serif;
+  --primaryColor: #195a87;
+  --secondaryColor: #f3902e;
+  --paragraphColor: #696969;
+  --whiteColor: #ffffff;
+  --blackColor: #2f3045;
+  --transition: 0.5s;
+  --fontSize: 16px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--blackColor);
+  font: {
+    size: var(--fontSize);
+    family: var(--fontFamily);
+  }
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--blackColor);
+  font: {
+    weight: 700;
+    family: var(--headingFontFamily);
+  }
+}
+a {
+  transition: var(--transition);
+  color: var(--blackColor);
+  text-decoration: none;
+  outline: 0 !important;
+
+  &:hover {
+    color: var(--primaryColor);
+    text-decoration: none;
+  }
+}
+:focus {
+  outline: 0 !important;
+}
+.d-table {
+  width: 100%;
+  height: 100%;
+
+  &-cell {
+    vertical-align: middle;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+p {
+  color: var(--paragraphColor);
+  font-size: var(--fontSize);
+  margin-bottom: 15px;
+  line-height: 1.8;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Form Control
+.form-control {
+  height: 45px;
+  border-radius: 5px;
+  color: var(--blackColor);
+  font-size: var(--fontSize);
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  box-shadow: unset !important;
+  transition: var(--transition);
+  padding: {
+    left: 20px;
+    right: 20px;
+  }
+  &::placeholder {
+    color: #666666;
+    transition: var(--transition);
+  }
+  &:focus {
+    border-color: var(--primaryColor);
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}
+textarea {
+  &.form-control {
+    height: auto;
+    padding-top: 20px;
+  }
+}
+
+// Default Btn
+.default-btn {
+  border: 1px solid var(--primaryColor);
+  box-shadow: unset;
+  text-align: center;
+  padding: 10px 25px;
+  border-radius: 5px;
+  display: inline-block;
+  color: var(--whiteColor);
+  transition: var(--transition);
+  background-color: var(--primaryColor);
+  font: {
+    weight: 600;
+    size: var(--fontSize);
+  }
+  &:hover {
+    color: var(--primaryColor);
+    background-color: transparent;
+  }
+}
+
+// Section Title
+.section-title {
+  max-width: 700px;
+  margin: {
+    bottom: 40px;
+    top: -5px;
+  }
+  .top-title {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--primaryColor);
+    font: {
+      weight: 600;
+      size: 15px;
+    }
+  }
+  h2 {
+    font-size: 35px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+
+    span {
+      color: var(--primaryColor);
+    }
+  }
+  p {
+    span {
+      color: var(--primaryColor);
+    }
+  }
+  &.text-center {
+    max-width: 600px;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+}
+// scrollBar manipulation
+// width
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--paragraphColor);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

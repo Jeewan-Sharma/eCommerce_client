@@ -1,0 +1,118 @@
+.footer-area {
+  background-color: #25283a;
+  padding-top: 100px;
+}
+.single-footer-widget {
+  margin-bottom: 25px;
+
+  .logo {
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+  h3 {
+    color: var(--whiteColor);
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  p {
+    color: #b9baca;
+  }
+  .social-link {
+    padding-left: 0;
+    list-style-type: none;
+    margin: {
+      bottom: 0;
+      top: 20px;
+    }
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      a {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50px;
+        display: inline-block;
+        color: var(--whiteColor);
+        background-color: rgba(104, 105, 125, 0.3);
+
+        &:hover {
+          background-color: var(--primaryColor);
+          transform: translateY(-2px);
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .use-link {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+
+    li {
+      margin-bottom: 15px;
+
+      a {
+        color: #b9baca;
+
+        &:hover {
+          color: var(--primaryColor);
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .address-link {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+
+    li {
+      color: #b9baca;
+      position: relative;
+      margin-bottom: 15px;
+
+      span {
+        color: var(--whiteColor);
+      }
+      a {
+        color: #b9baca;
+        margin-left: 2px;
+
+        &:hover {
+          color: var(--primaryColor);
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.copyright-area {
+  border-top: 1px solid rgba(104, 105, 125, 0.3);
+  text-align: center;
+  margin-top: 75px;
+  padding: {
+    top: 20px;
+    bottom: 20px;
+  }
+  p {
+    color: #b9baca;
+
+    a {
+      color: var(--whiteColor);
+      font-weight: 600;
+    }
+    span {
+      color: var(--whiteColor);
+    }
+  }
+}
