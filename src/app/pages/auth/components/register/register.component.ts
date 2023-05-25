@@ -3,6 +3,7 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -15,7 +16,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private ngxSpinnerService: NgxSpinnerService,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) {
     this.entryForm = new FormGroup({
       firstName: new FormControl('', Validators.compose([Validators.required])),
@@ -53,13 +55,20 @@ export class RegisterComponent implements OnInit {
           this.f['confirmPassword'].value
         )
         .toPromise();
+      if (loginSubs.error) {
+      }
+
+      if (loginSubs && loginSubs.error) {
+        throw new Error(loginSubs.error.message);
+      }
+
       Swal.fire({
         icon: 'success',
         title: 'True',
         text: 'Registration Successful',
         footer: '<a href="/auth/login">Proceed to Login</a>',
       });
-
+      console.log(loginSubs);
       this.ngxSpinnerService.hide();
     } catch (err: any) {
       console.log(err);
