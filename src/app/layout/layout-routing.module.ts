@@ -45,6 +45,13 @@ const routes: Routes = [
             (m) => m.ContactUsModule
           ),
       },
+      {
+        path: 'profile',
+        loadChildren: () =>
+          import('../pages/profile/profile.module').then(
+            (m) => m.ProfileModule
+          ),
+      },
       { path: '**', redirectTo: 'home', pathMatch: 'full' },
     ],
   },

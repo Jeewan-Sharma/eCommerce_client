@@ -50,6 +50,7 @@ a {
   &:hover {
     color: var(--primaryColor);
     text-decoration: none;
+    // cursor: pointer;
   }
 }
 :focus {
@@ -128,7 +129,30 @@ textarea {
   }
   &:hover {
     color: var(--primaryColor);
-    background-color: transparent;
+    background-color: aliceblue;
+  }
+}
+
+.default-btn-2 {
+  border: 1px solid var(--primaryColor);
+  box-shadow: unset;
+  text-align: center;
+  padding: 10px 25px;
+  border-radius: 5px;
+  display: inline-block;
+  color: black;
+  transition: var(--transition);
+  background-color: aliceblue;
+  opacity: 0.7;
+  cursor: pointer;
+  font: {
+    weight: 600;
+    size: var(--fontSize);
+  }
+  &:hover {
+    color: white;
+    background-color: var(--primaryColor);
+    opacity: 1;
   }
 }
 
